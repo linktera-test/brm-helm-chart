@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: denizbank-brm-rest-api
+  labels:
+    app: denizbank-brm-rest-api
+spec:
+  selector:
+    app: denizbank-brm-rest-api
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: LoadBalancer

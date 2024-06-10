@@ -1,0 +1,6 @@
+repositoryID: 1d881bcf-83b3-4d02-9a6b-36b2ab6f32ee
+owners: #(optional, used to claim repository ownership)
+  - name: Linktera
+    email: admin@linktera.com
+  - name: elicanyesil
+    email: elican.yesil@lnktera.com
