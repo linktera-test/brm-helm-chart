@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  brm-backend:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-06-11T08:58:50.993341369Z"
+    description: A Helm chart for Kubernetes
+    digest: 32e1f5a8046ac0a3d0adc4e1e9cebe09d23212667873cfe9a0c14e6d5d91af50
+    name: brm-backend
+    type: application
+    urls:
+    - https://linktera-test.github.io/brm-helm-chart/brm-backend-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-06-11T08:58:50.992087268Z"
