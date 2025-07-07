@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: denizbank-brm-rest-api
+  name: denizbank-brm-rest-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: denizbank-brm-rest-api
+  strategy: { }
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: denizbank-brm-rest-api
+    spec:
+      containers:
+        - image: {{ .Values.container.image }}
+          name: {{ .Values.container.name }}
+          envFrom:
+            - configMapRef:
+                name: brm-rest-api
+          resources:
+            limits:
+              cpu: {{.Values.container.resources.limitsCpu}}
+              memory: {{.Values.container.resources.limitsMemory}}
+            requests:
+              cpu: {{.Values.container.resources.requestsCpu}}
+              memory: {{.Values.container.resources.requestsMemory}}
+          ports:
+            - containerPort: 8080
+      restartPolicy: Always
+      imagePullSecrets:
+        - name: regcred
+status: { }
